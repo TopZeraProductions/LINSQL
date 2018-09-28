@@ -21,3 +21,15 @@ Arquivos não monitorados:
 
 nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
 Add to stage area.. 
+commiting.. 
+[master a4accfc] Up
+ 5 files changed, 181 insertions(+)
+ rename ProjetoLMS-v0.1.sql => atividadesContinuas/ac-04/ProjetoLMS-v0.1.sql (100%)
+ create mode 100644 atividadesContinuas/ac-05/creates/correcaoAc2.sql
+ create mode 100644 atividadesContinuas/ac-05/creates/correcaoAc4.sql
+ create mode 100644 atividadesContinuas/ac-05/inserts/inserts.sql
+ create mode 100644 logGit.log
+pushing:.. 
+To https://github.com/TopZeraProductions/LINSQL.git
+   f222a69..a4accfc  master -> master
+done
