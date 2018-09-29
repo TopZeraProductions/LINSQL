@@ -35,4 +35,45 @@ SELECT
 	, concat(EP.Pnome, EP.Mnome, EP.Unome) AS 'Nome completo'
 FROM ADMINISTRACAO.EMPREGADO AS EP
 
+--------------------------------------------------------------
+
+SELECT 
+	EP.CPF_super,
+	EP.Pnome
+FROM	COMPANHIA.ADMINISTRACAO.EMPREGADO AS EP
+WHERE
+	EP.Dnum =5 AND EP.CPF_super != '888665555';
+
+-----------------------------------------------
+SELECT 
+	EP.CPF_super,
+	EP.Pnome	
+FROM	COMPANHIA.ADMINISTRACAO.EMPREGADO AS EP
+WHERE
+	EP.Dnum IN (5, 4, 1)
+------------------------------------------
+	SELECT 
+	EP.CPF_super,
+	EP.Pnome
+	
+FROM	COMPANHIA.ADMINISTRACAO.EMPREGADO AS EP
+
+WHERE
+	EP.Salario >= 20000 AND Ep.Salario <= 40000;
+
+	
+----------------------------------------------
+SELECT 
+	EP.CPF_super
+	, EP.Pnome
+FROM
+	COMPANHIA.ADMINISTRACAO.EMPREGADO AS EP
+WHERE
+	EP.Salario BETWEEN 2000 AND 4000;
+	
+---------------------------------------
+
+SELECT * FROM COMPANHIA.ADMINISTRACAO.EMPREGADO WHERE CPF_super <> '33344555';
+	
+-----------------------------------------
 
