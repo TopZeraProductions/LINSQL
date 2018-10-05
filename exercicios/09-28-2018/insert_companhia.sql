@@ -1,5 +1,4 @@
 USE COMPANHIA;
-go
 
 -- Não é possível inserir empregados nem departamentos. Por quê?
 /*

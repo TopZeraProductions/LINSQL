@@ -52,7 +52,7 @@ FROM	COMPANHIA.ADMINISTRACAO.EMPREGADO AS EP
 WHERE
 	EP.Dnum IN (5, 4, 1)
 ------------------------------------------
-	SELECT 
+SELECT 
 	EP.CPF_super,
 	EP.Pnome
 	
