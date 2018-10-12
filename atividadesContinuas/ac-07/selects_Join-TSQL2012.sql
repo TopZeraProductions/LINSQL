@@ -1,6 +1,5 @@
 /*
  * TOPZERA PRODUCTION 05/10/2108
- * 
  */
 
 /* Exercício 1 */
@@ -10,7 +9,7 @@ SELECT
 	, CS.country AS 'País'
 	, ORD.orderdate AS 'Data do pedido'
 FROM TSQL2012.Sales.Orders AS ORD
-JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
+	JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
 
 /* EXERCICIO 2 */
 SELECT
@@ -21,20 +20,20 @@ SELECT
 	, CONCAT(EP.firstname, N' ', EP.lastname) AS 'Nome completo do empregado'
 	, EP.country AS 'Pais do empregado'
 FROM TSQL2012.Sales.Orders AS ORD
-JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
-JOIN TSQL2012.HR.Employees AS EP ON EP.empid = ORD.empid
+	JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
+	JOIN TSQL2012.HR.Employees AS EP ON EP.empid = ORD.empid
 WHERE EP.country LIKE N'%UK%'
 
 /* EXERCICIO 3 */
 SELECT
-	  ORD.orderid AS 'Numero do pedido'
+	ORD.orderid AS 'Numero do pedido'
 	, CS.contactname AS 'Nome do Contato'
 	, CS.country AS 'País Do cliente'
 	, ORD.orderdate AS 'Data do pedido'
 	, CONCAT(EP.firstname, N' ', EP.lastname) AS 'Nome completo do empregado'
 FROM TSQL2012.Sales.Orders AS ORD
-JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
-JOIN TSQL2012.HR.Employees AS EP ON EP.empid = ORD.empid
+	JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
+	JOIN TSQL2012.HR.Employees AS EP ON EP.empid = ORD.empid
 WHERE CS.country LIKE N'%BRAZIL%'
 ORDER BY ORD.orderdate DESC
 
@@ -84,17 +83,34 @@ ORDER BY PRODUCT.productname ASC, DETAIL.qty DESC
 
 /* EXERCICIO 7 */
 SELECT
-	DETAIL.orderid
-	, PRODUCT.productname
-	, SUPLIER.contactname AS 'Nome do contato do'
-FROM TSQL2012.Sales.OrderDetails AS DETAIL
-JOIN TSQL2012.Production.Products AS PRODUCT ON PRODUCT.productid = DETAIL.productid 
-JOIN TSQL2012.Production.Suppliers AS SUPLIER ON SUPLIER.supplierid = PRODUCT.supplierid 
-		
-
-SELECT *
-FROM TSQL2012.Production.Suppliers
-FROM TSQL2012.Production.Products
-FROM TSQL2012.Sales.Orders
-FROM TSQL2012.Production.Categories
-FROM TSQL2012.Production.Categories
+	SALEORDER.orderid AS 'Id da venda'
+	, CUSTOMER.contactname AS 'Contato do cliente'
+	, SALEDETAIL.qty AS 'Quantidade de produtos'
+	, SALEORDER.orderdate AS 'Data do pedido'
+	, PRODUCT.productname AS 'Nome do produto'
+	, SALER.city AS 'Cidade do fornecedor ('
+FROM TSQL2012.Sales.Orders AS SALEORDER
+	JOIN TSQL2012.Sales.OrderDetails 	AS SALEDETAIL 	ON SALEDETAIL.orderid = SALEORDER.orderid  
+	JOIN TSQL2012.Sales.Customers 		AS CUSTOMER 	ON CUSTOMER.custid = SALEORDER.custid  
+	JOIN TSQL2012.Production.Products	AS PRODUCT 		ON PRODUCT.productid = SALEDETAIL.productid  
+	JOIN TSQL2012.Production.Suppliers 	AS SALER 		ON SALER.supplierid = PRODUCT.supplierid  
+WHERE 1 = 1
+	AND (
+		SALEORDER.orderdate >= '2006-01-07' AND 
+		SALEORDER.orderdate <= '2006-30-07'
+	) 
+	AND (
+		SALEDETAIL.qty > 20  AND 
+		SALEDETAIL.qty < 60
+	)
+	AND (
+		PRODUCT.productname LIKE '%Product A%' OR  
+		PRODUCT.productname LIKE '%Product G%'
+	)
+	AND ( 
+		SALER.city LIKE '%Stockholm%' OR  
+		SALER.city LIKE '%Sydney%' OR  
+		SALER.city LIKE '%Sandvika%' OR  
+		SALER.city LIKE '%Ravenna%'
+	)
+ORDER BY SALEORDER.empid DESC
