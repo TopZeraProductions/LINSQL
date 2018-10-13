@@ -39,7 +39,8 @@ SELECT
 FROM TSQL2012.Sales.Orders AS ORD
 	JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
 	JOIN TSQL2012.HR.Employees AS EP ON EP.empid = ORD.empid
-WHERE EP.country LIKE N'%UK%'
+WHERE 1 = 1
+	AND EP.country LIKE N'%UK%'
 
 /* 
 	EXERCICIO 3 
@@ -61,7 +62,8 @@ SELECT
 FROM TSQL2012.Sales.Orders AS ORD
 	JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
 	JOIN TSQL2012.HR.Employees AS EP ON EP.empid = ORD.empid
-WHERE CS.country LIKE N'%BRAZIL%'
+WHERE 1 = 1
+	AND CS.country LIKE N'%BRAZIL%'
 ORDER BY ORD.orderdate DESC
 
 /* 
@@ -88,10 +90,11 @@ FROM TSQL2012.Sales.Orders AS ORD
 	JOIN TSQL2012.Sales.Customers AS CS ON CS.custid = ORD.custid
 	JOIN TSQL2012.HR.Employees    AS EP ON EP.empid = ORD.empid
 	JOIN TSQL2012.Sales.Shippers  AS CP ON CP.shipperid = ORD.shipperid
-WHERE EP.country LIKE N'%USA%' 
+WHERE 1 = 1
+	AND EP.country LIKE N'%USA%' 
 	AND (
-		CP.companyname LIKE '%Shipper ETYNR%' OR  
-		CP.companyname LIKE '%Shipper GVSUA%'
+		CP.companyname LIKE N'%Shipper ETYNR%' OR  
+		CP.companyname LIKE N'%Shipper GVSUA%'
 	)
 ORDER BY ORD.orderid DESC
 
@@ -110,7 +113,8 @@ SELECT
 	, PRODUCTS.discontinued AS 'Descontinuado'
 FROM TSQL2012.Production.Products AS PRODUCTS
 	JOIN TSQL2012.Production.Categories AS CATEGORY ON CATEGORY.categoryid = PRODUCTS.categoryid
-WHERE CATEGORY.categoryname LIKE '%Beverages%'
+WHERE 1 = 1
+	AND CATEGORY.categoryname LIKE N'%Beverages%'
 	AND PRODUCTS.unitprice < 30
 ORDER BY PRODUCTS.unitprice DESC
 	
@@ -131,7 +135,8 @@ SELECT
 FROM TSQL2012.Sales.OrderDetails AS DETAIL
 	JOIN TSQL2012.Production.Products AS PRODUCT ON PRODUCT.productid = DETAIL.productid 
 	JOIN TSQL2012.Production.Suppliers AS SUPLIER ON SUPLIER.supplierid = PRODUCT.supplierid 
-WHERE DETAIL.qty > 100
+WHERE 1 = 1
+	AND DETAIL.qty > 100
 ORDER BY PRODUCT.productname ASC, DETAIL.qty DESC
 
 /* 
@@ -154,7 +159,7 @@ SELECT
 	, SALEDETAIL.qty AS 'Quantidade de produtos'
 	, SALEORDER.orderdate AS 'Data do pedido'
 	, PRODUCT.productname AS 'Nome do produto'
-	, SALER.city AS 'Cidade do fornecedor ('
+	, SALER.city AS 'Cidade do fornecedor'
 FROM TSQL2012.Sales.Orders AS SALEORDER
 	JOIN TSQL2012.Sales.OrderDetails 	AS SALEDETAIL 	ON SALEDETAIL.orderid = SALEORDER.orderid  
 	JOIN TSQL2012.Sales.Customers 		AS CUSTOMER 	ON CUSTOMER.custid = SALEORDER.custid  
@@ -170,13 +175,13 @@ WHERE 1 = 1
 		SALEDETAIL.qty < 60
 	)
 	AND (
-		PRODUCT.productname LIKE '%Product A%' OR  
-		PRODUCT.productname LIKE '%Product G%'
+		PRODUCT.productname LIKE N'%Product A%' OR  
+		PRODUCT.productname LIKE N'%Product G%'
 	)
 	AND ( 
-		SALER.city LIKE '%Stockholm%' OR  
-		SALER.city LIKE '%Sydney%' OR  
-		SALER.city LIKE '%Sandvika%' OR  
-		SALER.city LIKE '%Ravenna%'
+		SALER.city LIKE N'%Stockholm%' OR  
+		SALER.city LIKE N'%Sydney%' OR  
+		SALER.city LIKE N'%Sandvika%' OR  
+		SALER.city LIKE N'%Ravenna%'
 	)
 ORDER BY SALEORDER.empid DESC
