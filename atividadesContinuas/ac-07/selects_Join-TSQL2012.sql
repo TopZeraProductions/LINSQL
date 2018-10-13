@@ -1,8 +1,9 @@
 /*
- * TOPZERA PRODUCTION 05/10/2108 até 12/10/2108
+ * TOPZERA PRODUCTION 12/10/2108
  * João Vitor Paulino 	- 1801021 - paulino.joaovitor@yahoo.com.br
  * Daniel Roberto 		- 1800479 - bruce-irom@hotmail.com
  */
+
 
 /* 
     EXERCICIO 1 
@@ -173,11 +174,11 @@ WHERE 1 = 1
 	AND (
 		SALEDETAIL.qty > 20  AND 
 		SALEDETAIL.qty < 60
-	)
+	) 
 	AND (
 		PRODUCT.productname LIKE N'%Product A%' OR  
 		PRODUCT.productname LIKE N'%Product G%'
-	)
+	) 
 	AND ( 
 		SALER.city LIKE N'%Stockholm%' OR  
 		SALER.city LIKE N'%Sydney%' OR  
