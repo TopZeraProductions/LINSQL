@@ -158,8 +158,8 @@ SELECT
 FROM TSQL2012.Sales.Orders AS SALEORDER
 	JOIN TSQL2012.Sales.OrderDetails 	AS SALEDETAIL 	ON SALEDETAIL.orderid = SALEORDER.orderid  
 	JOIN TSQL2012.Sales.Customers 		AS CUSTOMER 	ON CUSTOMER.custid = SALEORDER.custid  
-	JOIN TSQL2012.Production.Products	AS PRODUCT 		ON PRODUCT.productid = SALEDETAIL.productid  
-	JOIN TSQL2012.Production.Suppliers 	AS SALER 		ON SALER.supplierid = PRODUCT.supplierid  
+	JOIN TSQL2012.Production.Products	AS PRODUCT 	ON PRODUCT.productid = SALEDETAIL.productid  
+	JOIN TSQL2012.Production.Suppliers 	AS SALER 	ON SALER.supplierid = PRODUCT.supplierid  
 WHERE 1 = 1
 	AND (
 		SALEORDER.orderdate >= '2006-01-07' AND 
