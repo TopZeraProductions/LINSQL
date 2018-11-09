@@ -1,4 +1,4 @@
- SELECT
+SELECT
 	 COUNT(AL.Nome) AS 'Quantidade'
 	 , DI.Nome
 FROM lms.dbo.SolicitacaoMatricula AS SM
@@ -8,14 +8,14 @@ FROM lms.dbo.SolicitacaoMatricula AS SM
 GROUP BY DI.Nome 
 
 SELECT 
-	ATIVIDADE.Titulo
-	, ALUNO.Nome
+	ALUNO.Nome	
+	, ATIVIDADE.Titulo
 	, ENTREGA.Nota
 FROM lms.dbo.Entrega AS ENTREGA
 	LEFT JOIN lms.dbo.Aluno AS ALUNO  ON  ALUNO.ID = ENTREGA.IdAluno
 	LEFT JOIN lms.dbo.AtividadeVinculada AS VINCULADA ON  VINCULADA.ID = ENTREGA.IdAtividadeVinculada
 	LEFT JOIN lms.dbo.Atividade AS ATIVIDADE ON  ATIVIDADE.ID = VINCULADA.IdAtividade
-ORDER BY ATIVIDADE.Titulo
+ORDER BY ALUNO.Nome, ATIVIDADE.ID
 
 SELECT
 	DISC.Nome	
@@ -42,3 +42,14 @@ FROM lms.dbo.Entrega AS ENTREGA
 	LEFT JOIN lms.dbo.DisciplinaOfertada AS DISCO ON   VINCULADA.ID = DISCO.ID
 	LEFT JOIN lms.dbo.Disciplina AS DISC ON DISCO.IdDisciplina = DISC.ID
 GROUP BY DISC.Nome , ALUNO.Nome
+
+
+SELECT
+	DISC.Nome
+	, Avg(DATEDIFF(day, (CASE WHEN DtEntrega IS NULL THEN GETDATE() ELSE DtEntrega END) , DtAvaliacao)) AS 'Média em dias'
+FROM lms.dbo.Entrega AS ENTREGA
+	LEFT JOIN lms.dbo.AtividadeVinculada AS VINCULADA ON  VINCULADA.ID = ENTREGA.IdAtividadeVinculada
+	LEFT JOIN lms.dbo.Atividade AS ATIVIDADE ON  ATIVIDADE.ID = VINCULADA.IdAtividade
+	LEFT JOIN lms.dbo.DisciplinaOfertada AS DISCO ON   VINCULADA.ID = DISCO.ID
+	LEFT JOIN lms.dbo.Disciplina AS DISC ON DISCO.IdDisciplina = DISC.ID
+GROUP BY DISC.Nome
