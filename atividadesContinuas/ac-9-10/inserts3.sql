@@ -76,99 +76,95 @@ INSERT INTO lms.dbo.DisciplinaOfertada (IdCoordenador,DtInicioMatricula,DtFimMat
 
     
 INSERT INTO lms.dbo.Entrega (IdAluno,IdAtividadeVinculada,Titulo,Resposta,DtEntrega,Status,IdProfessor,Nota,DtAvaliacao,Obs) VALUES 
- (1,1,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,'2018-11-08','Nada declarado
+(1,1,'Atividade Continua
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.00,'2018-11-08','Nada declarado
 ')
 ,(1,2,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,'2018-11-08','Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,9.00,'2018-11-08','Nada declarado
 ')
 ,(1,3,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.00,NULL,'Nada declarado
 ')
 ,(1,4,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,2.00,NULL,'Nada declarado
 ')
 ,(1,5,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.00,NULL,'Nada declarado
 ')
 ,(1,6,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,8.00,NULL,'Nada declarado
 ')
 ,(1,7,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,6.00,NULL,'Nada declarado
 ')
 ,(1,8,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.00,NULL,'Nada declarado
 ')
 ,(1,9,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,5.00,NULL,'Nada declarado
 ')
 ,(1,10,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,4.00,NULL,'Nada declarado
 ')
-;
-INSERT INTO lms.dbo.Entrega (IdAluno,IdAtividadeVinculada,Titulo,Resposta,DtEntrega,Status,IdProfessor,Nota,DtAvaliacao,Obs) VALUES 
-(2,1,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+, (2,1,'Atividade Continua
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,5.00,NULL,'Nada declarado
 ')
 ,(2,2,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,4.00,NULL,'Nada declarado
 ')
 ,(2,3,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,9.00,NULL,'Nada declarado
 ')
 ,(2,4,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,10.00,NULL,'Nada declarado
 ')
 ,(2,5,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.80,NULL,'Nada declarado
 ')
 ,(2,6,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,4.40,NULL,'Nada declarado
 ')
 ,(2,7,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,5.00,NULL,'Nada declarado
 ')
 ,(2,8,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,3.50,NULL,'Nada declarado
 ')
 ,(2,9,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,8.00,NULL,'Nada declarado
 ')
 ,(2,10,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,10.00,NULL,'Nada declarado
 ')
-;
-INSERT INTO lms.dbo.Entrega (IdAluno,IdAtividadeVinculada,Titulo,Resposta,DtEntrega,Status,IdProfessor,Nota,DtAvaliacao,Obs) VALUES 
-(3,1,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+, (3,1,'Atividade Continua
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,6.00,NULL,'Nada declarado
 ')
 ,(3,2,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.00,NULL,'Nada declarado
 ')
 ,(3,3,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,8.00,NULL,'Nada declarado
 ')
 ,(3,4,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,8.50,NULL,'Nada declarado
 ')
 ,(3,5,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,9.10,NULL,'Nada declarado
 ')
 ,(3,6,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,4.20,NULL,'Nada declarado
 ')
 ,(3,7,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,5.70,NULL,'Nada declarado
 ')
 ,(3,8,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,6.40,NULL,'Nada declarado
 ')
-,(3,9,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,NULL,'Nada declarado
+, (3,9,'Atividade Continua
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.10,NULL,'Nada declarado
 ')
-,(3,10,'Atividade Continua
-','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,0.00,'2018-11-08','Nada declarado
+, (3,10,'Atividade Continua
+','Não Foi respondido ainda','2018-11-08 21:39:11.000','Entregue',1,7.40,'2018-11-08','Nada declarado
 ')
 
 INSERT INTO lms.dbo.Mensagem (IdAluno,IdProfessor,Assunto,Referencia,Conteudo,Status,DtEnvio,DtResposta,Resposta) VALUES 
